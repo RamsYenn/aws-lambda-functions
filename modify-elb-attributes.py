@@ -5,9 +5,9 @@ import os
 # get elbv2 client
 client = boto3.client('elbv2')
 
-# get the list of load balancer Arn from elb.json
+# get the list of load balancer Arn from elb-arn.json
 workDir = os.getcwd()
-prop = json.loads(open(workDir+'\elb.json').read())
+prop = json.loads(open(workDir+'\elb-arn.json').read())
 
 for arn in prop['loabBalancers']:
 
