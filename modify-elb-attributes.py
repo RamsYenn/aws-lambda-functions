@@ -1,19 +1,25 @@
 import boto3
 import json
+import os
 
 # get elbv2 client
 client = boto3.client('elbv2')
 
-# modify the attributes of loab balancer
-response = client.modify_load_balancer_attributes(
-    LoadBalancerArn='arn:aws:elasticloadbalancing:us-east-1:117613187320:loadbalancer/app/ot-api-alb/60569c6e14d2e816',
-    Attributes=[
-        {
-            'Key': 'idle_timeout.timeout_seconds',
-            'Value': '1800'
-        }
-    ]
-)
+# get the list of load balancer Arn from elb.json
+workDir = os.getcwd()
+prop = json.loads(open(workDir+'\elb.json').read())
 
+for arn in prop['loabBalancers']:
 
-print(response['ResponseMetadata']['HTTPStatusCode'])
+    # modify the idle timeout value 
+    response = client.modify_load_balancer_attributes(
+        LoadBalancerArn=arn,
+        Attributes=[
+            {
+                'Key': 'idle_timeout.timeout_seconds',
+                'Value': '1800'
+            }
+        ]
+    )
+
+    print(arn+'-'+str(response['ResponseMetadata']['HTTPStatusCode']))
