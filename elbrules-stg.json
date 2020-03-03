@@ -1,0 +1,10 @@
+{
+    
+    "ice-test.cloud.sysco.net":"arn:aws:elasticloadbalancing:us-east-1:117613187320:targetgroup/ot-api/650aa900733cbb38",
+    "swis-test.cloud.sysco.net":"arn:aws:elasticloadbalancing:us-east-1:117613187320:targetgroup/ot-api/650aa900733cbb38",
+    "ecs-test.cloud.sysco.net":"arn:aws:elasticloadbalancing:us-east-1:117613187320:targetgroup/ot-api/650aa900733cbb38",
+    "claims-test.cloud.sysco.net":"arn:aws:elasticloadbalancing:us-east-1:117613187320:targetgroup/ot-api/650aa900733cbb38",
+    "spin-test.cloud.sysco.net":"arn:aws:elasticloadbalancing:us-east-1:117613187320:targetgroup/ot-api/650aa900733cbb38",
+    "supplierweb-test.cloud.sysco.net":"arn:aws:elasticloadbalancing:us-east-1:117613187320:targetgroup/ot-api/650aa900733cbb38"
+    
+}
