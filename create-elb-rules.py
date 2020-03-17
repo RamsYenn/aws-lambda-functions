@@ -17,7 +17,7 @@ for listeners in response1['Listeners']:
         # print(response2)
         workDir = os.getcwd()
         elbrules = json.loads(open(workDir+'\elb-rules-stg.json').read())
-        rulePriority = 1;
+        rulePriority = 1
 
         for rule in elbrules:
 

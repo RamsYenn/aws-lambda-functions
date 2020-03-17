@@ -1,0 +1,57 @@
+{"LoadBalancers": [
+        {"LoadBalancerArn": "arn:aws:elasticloadbalancing:us-east-1: 117613187320:loadbalancer/app/tf-lb-20190430201856753400000007/8e9d0428ed97bb27", "DNSName": "internal-tf-lb-20190430201856753400000007-2060603704.us-east-1.elb.amazonaws.com", "CanonicalHostedZoneId": "Z35SXDOTRQ7X7K", "CreatedTime": datetime.datetime(2019,
+            4,
+            30,
+            20,
+            18,
+            57,
+            780000, tzinfo=tzutc()), "LoadBalancerName": "tf-lb-20190430201856753400000007", "Scheme": "internal", "VpcId": "vpc-0ad8acaf059466b6a", "State": {"Code": "active"
+            }, "Type": "application", "AvailabilityZones": [
+                {"ZoneName": "us-east-1c", "SubnetId": "subnet-070307e24f8ac6bf8", "LoadBalancerAddresses": []
+                },
+                {"ZoneName": "us-east-1a", "SubnetId": "subnet-07daae8ae595d95b5", "LoadBalancerAddresses": []
+                },
+                {"ZoneName": "us-east-1b", "SubnetId": "subnet-0d9b3c0934616831a", "LoadBalancerAddresses": []
+                }
+            ], "SecurityGroups": ["sg-000074a6f95c2e411"
+            ], "IpAddressType": "ipv4"
+        },
+        {"LoadBalancerArn": "arn:aws:elasticloadbalancing:us-east-1: 117613187320:loadbalancer/app/tf-lb-20190501132612540400000007/038572a0b73f8f76", "DNSName": "internal-tf-lb-20190501132612540400000007-1779808500.us-east-1.elb.amazonaws.com", "CanonicalHostedZoneId": "Z35SXDOTRQ7X7K", "CreatedTime": datetime.datetime(2019,
+            5,
+            1,
+            13,
+            26,
+            13,
+            480000, tzinfo=tzutc()), "LoadBalancerName": "tf-lb-20190501132612540400000007", "Scheme": "internal", "VpcId": "vpc-0ad8acaf059466b6a", "State": {"Code": "active"
+            }, "Type": "application", "AvailabilityZones": [
+                {"ZoneName": "us-east-1c", "SubnetId": "subnet-070307e24f8ac6bf8", "LoadBalancerAddresses": []
+                },
+                {"ZoneName": "us-east-1a", "SubnetId": "subnet-07daae8ae595d95b5", "LoadBalancerAddresses": []
+                },
+                {"ZoneName": "us-east-1b", "SubnetId": "subnet-0d9b3c0934616831a", "LoadBalancerAddresses": []
+                }
+            ], "SecurityGroups": ["sg-0cb3cddac7f6479f4"
+            ], "IpAddressType": "ipv4"
+        },
+        {"LoadBalancerArn": "arn:aws:elasticloadbalancing:us-east-1: 117613187320:loadbalancer/app/ot-api-alb/60569c6e14d2e816", "DNSName": "internal-ot-api-alb-1074416514.us-east-1.elb.amazonaws.com", "CanonicalHostedZoneId": "Z35SXDOTRQ7X7K", "CreatedTime": datetime.datetime(2019,
+            10,
+            16,
+            23,
+            47,
+            0,
+            120000, tzinfo=tzutc()), "LoadBalancerName": "ot-api-alb", "Scheme": "internal", "VpcId": "vpc-0ad8acaf059466b6a", "State": {"Code": "active"
+            }, "Type": "application", "AvailabilityZones": [
+                {"ZoneName": "us-east-1c", "SubnetId": "subnet-070307e24f8ac6bf8", "LoadBalancerAddresses": []
+                },
+                {"ZoneName": "us-east-1a", "SubnetId": "subnet-07daae8ae595d95b5", "LoadBalancerAddresses": []
+                },
+                {"ZoneName": "us-east-1b", "SubnetId": "subnet-0d9b3c0934616831a", "LoadBalancerAddresses": []
+                }
+            ], "SecurityGroups": ["sg-042f4b77f5fd0b8d8"
+            ], "IpAddressType": "ipv4"
+        }
+    ], "ResponseMetadata": {"RequestId": "ccd612a6-75e8-4bd6-acf2-7266050c60af", "HTTPStatusCode": 200, "HTTPHeaders": {"x-amzn-requestid": "ccd612a6-75e8-4bd6-acf2-7266050c60af", "content-type": "text/xml", "content-length": "4532", "vary": "accept-encoding", "date": "Wed,
+            04 Mar 2020 01: 42: 31 GMT"
+        }, "RetryAttempts": 0
+    }
+}

@@ -1,25 +1,24 @@
 import boto3
-import json
-import os
 
 # get elbv2 client
 client = boto3.client('elbv2')
 
-# get the list of load balancer Arn from elb-arn.json
-workDir = os.getcwd()
-prop = json.loads(open(workDir+'\elb-arn.json').read())
 
-for arn in prop['loabBalancers']:
+def lambda_handler(event, context):
 
-    # modify the idle timeout value 
-    response = client.modify_load_balancer_attributes(
-        LoadBalancerArn=arn,
-        Attributes=[
-            {
-                'Key': 'idle_timeout.timeout_seconds',
-                'Value': '1800'
-            }
-        ]
-    )
+    # get the load balancers ARNs
+    elbArns = client.describe_load_balancers()
 
-    print(arn+'-'+str(response['ResponseMetadata']['HTTPStatusCode']))
+    try:
+        for elb in elbArns['LoadBalancers']:
+            client.modify_load_balancer_attributes(
+                LoadBalancerArn=elb['LoadBalancerArn'],
+                Attributes=[
+                    {
+                        'Key': 'idle_timeout.timeout_seconds',
+                        'Value': '1800'
+                    }
+                ]
+            )
+    except Exception as e:
+        print(e)
